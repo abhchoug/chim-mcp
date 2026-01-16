@@ -6,15 +6,22 @@ A [Model Context Protocol](https://modelcontextprotocol.io/) server that exposes
 
 ### VS Code / GitHub Copilot (Recommended)
 
-**Option A: One-line install (User Settings)**
+**[![Install in VS Code](https://img.shields.io/badge/VS_Code-Install_CHIM_MCP-007ACC?style=for-the-badge&logo=visualstudiocode)](https://insiders.vscode.dev/redirect/mcp/install?name=chim&config=%7B%22type%22%3A%22stdio%22%2C%22command%22%3A%22npx%22%2C%22args%22%3A%5B%22-y%22%2C%22%40cisco-sbg%2Fchim-mcp%22%5D%7D)**
 
-Run this command to add CHIM MCP to your VS Code user settings:
+Or use one of these one-click install links:
+- [Install in VS Code Stable](vscode://ms-vscode.vscode-mcp/install?name=chim&config=%7B%22type%22%3A%22stdio%22%2C%22command%22%3A%22npx%22%2C%22args%22%3A%5B%22-y%22%2C%22%40cisco-sbg%2Fchim-mcp%22%5D%7D)
+- [Install in VS Code Insiders](https://insiders.vscode.dev/redirect/mcp/install?name=chim&config=%7B%22type%22%3A%22stdio%22%2C%22command%22%3A%22npx%22%2C%22args%22%3A%5B%22-y%22%2C%22%40cisco-sbg%2Fchim-mcp%22%5D%7D)
+
+**Alternative: Manual Installation**
+
+<details>
+<summary>Click to expand manual options</summary>
+
+**Option A: Shell script**
 
 ```bash
 # macOS/Linux
 curl -fsSL https://raw.githubusercontent.com/abhchoug/chim-mcp/main/scripts/install-vscode.sh | bash
-
-# Or manually: Add to VS Code Settings (JSON) - Cmd+Shift+P → "Preferences: Open User Settings (JSON)"
 ```
 
 **Option B: Per-workspace**
@@ -32,6 +39,8 @@ Create `.vscode/mcp.json` in your project:
   }
 }
 ```
+
+</details>
 
 **Set your API key** (choose one method):
 - Ask Copilot: *"Save my CHIM API key: YOUR_KEY"* (uses `chim_save_api_key` tool)
