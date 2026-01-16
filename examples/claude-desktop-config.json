@@ -2,7 +2,7 @@
   "mcpServers": {
     "chim": {
       "command": "npx",
-      "args": ["-y", "@cisco-sbg/chim-mcp"]
+      "args": ["-y", "github:abhchoug/chim-mcp"]
     }
   }
 }

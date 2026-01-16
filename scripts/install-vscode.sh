@@ -56,7 +56,7 @@ TEMP_FILE=$(mktemp)
 jq '.mcp.servers.chim = {
   "type": "stdio",
   "command": "npx",
-  "args": ["-y", "@cisco-sbg/chim-mcp"]
+  "args": ["-y", "github:abhchoug/chim-mcp"]
 }' "$SETTINGS_FILE" > "$TEMP_FILE" && mv "$TEMP_FILE" "$SETTINGS_FILE"
 
 echo "✅ CHIM MCP added to VS Code settings!"

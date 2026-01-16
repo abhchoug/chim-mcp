@@ -6,11 +6,11 @@ A [Model Context Protocol](https://modelcontextprotocol.io/) server that exposes
 
 ### VS Code / GitHub Copilot (Recommended)
 
-**[![Install in VS Code](https://img.shields.io/badge/VS_Code-Install_CHIM_MCP-007ACC?style=for-the-badge&logo=visualstudiocode)](https://insiders.vscode.dev/redirect/mcp/install?name=chim&config=%7B%22type%22%3A%22stdio%22%2C%22command%22%3A%22npx%22%2C%22args%22%3A%5B%22-y%22%2C%22%40cisco-sbg%2Fchim-mcp%22%5D%7D)**
+**[![Install in VS Code](https://img.shields.io/badge/VS_Code-Install_CHIM_MCP-007ACC?style=for-the-badge&logo=visualstudiocode)](https://insiders.vscode.dev/redirect/mcp/install?name=chim&config=%7B%22type%22%3A%22stdio%22%2C%22command%22%3A%22npx%22%2C%22args%22%3A%5B%22-y%22%2C%22github%3Aabhchoug%2Fchim-mcp%22%5D%7D)**
 
 Or use one of these one-click install links:
-- [Install in VS Code Stable](vscode://ms-vscode.vscode-mcp/install?name=chim&config=%7B%22type%22%3A%22stdio%22%2C%22command%22%3A%22npx%22%2C%22args%22%3A%5B%22-y%22%2C%22%40cisco-sbg%2Fchim-mcp%22%5D%7D)
-- [Install in VS Code Insiders](https://insiders.vscode.dev/redirect/mcp/install?name=chim&config=%7B%22type%22%3A%22stdio%22%2C%22command%22%3A%22npx%22%2C%22args%22%3A%5B%22-y%22%2C%22%40cisco-sbg%2Fchim-mcp%22%5D%7D)
+- [Install in VS Code Stable](vscode://ms-vscode.vscode-mcp/install?name=chim&config=%7B%22type%22%3A%22stdio%22%2C%22command%22%3A%22npx%22%2C%22args%22%3A%5B%22-y%22%2C%22github%3Aabhchoug%2Fchim-mcp%22%5D%7D)
+- [Install in VS Code Insiders](https://insiders.vscode.dev/redirect/mcp/install?name=chim&config=%7B%22type%22%3A%22stdio%22%2C%22command%22%3A%22npx%22%2C%22args%22%3A%5B%22-y%22%2C%22github%3Aabhchoug%2Fchim-mcp%22%5D%7D)
 
 **Alternative: Manual Installation**
 
@@ -34,7 +34,7 @@ Create `.vscode/mcp.json` in your project:
     "chim": {
       "type": "stdio",
       "command": "npx",
-      "args": ["-y", "@cisco-sbg/chim-mcp"]
+      "args": ["-y", "github:abhchoug/chim-mcp"]
     }
   }
 }
@@ -60,7 +60,7 @@ Add to your Claude config file:
   "mcpServers": {
     "chim": {
       "command": "npx",
-      "args": ["-y", "@cisco-sbg/chim-mcp"]
+      "args": ["-y", "github:abhchoug/chim-mcp"]
     }
   }
 }
@@ -69,8 +69,13 @@ Add to your Claude config file:
 ### Global CLI Install
 
 ```bash
-npm install -g @cisco-sbg/chim-mcp
-chim-mcp  # runs the server
+# Install directly from GitHub
+npx github:abhchoug/chim-mcp
+
+# Or clone and run locally
+git clone https://github.com/abhchoug/chim-mcp.git
+cd chim-mcp && npm install && npm run build
+node dist/server.js
 ```
 
 ## Prerequisites
