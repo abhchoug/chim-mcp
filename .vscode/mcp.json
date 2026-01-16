@@ -1,0 +1,20 @@
+{
+  "servers": {
+    "chim": {
+      "type": "stdio",
+      "command": "npx",
+      "args": ["-y", "@cisco-sbg/chim-mcp"],
+      "env": {
+        "CHIM_API_KEY": "${input:chimApiKey}"
+      }
+    }
+  },
+  "inputs": [
+    {
+      "id": "chimApiKey",
+      "type": "promptString",
+      "description": "Enter your CHIM API key",
+      "password": true
+    }
+  ]
+}

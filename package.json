@@ -1,0 +1,53 @@
+{
+  "name": "@cisco-sbg/chim-mcp",
+  "version": "0.1.0",
+  "description": "Model Context Protocol server exposing CHIM change-management workflows as tools.",
+  "type": "module",
+  "main": "dist/server.js",
+  "bin": {
+    "chim-mcp": "dist/server.js"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "start": "node dist/server.js",
+    "dev": "tsx src/server.ts",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:coverage": "vitest run --coverage",
+    "prepublishOnly": "npm run build && npm test"
+  },
+  "keywords": [
+    "mcp",
+    "chim",
+    "change-management",
+    "cisco",
+    "model-context-protocol"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cisco-sbg/chim-mcp.git"
+  },
+  "homepage": "https://github.com/cisco-sbg/chim-mcp#readme",
+  "bugs": {
+    "url": "https://github.com/cisco-sbg/chim-mcp/issues"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.25.1",
+    "zod": "^4.2.1"
+  },
+  "devDependencies": {
+    "@types/node": "^25.0.3",
+    "tsx": "^4.21.0",
+    "typescript": "^5.9.3",
+    "vitest": "^4.0.17"
+  }
+}

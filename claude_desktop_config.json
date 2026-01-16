@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "chim": {
+      "command": "node",
+      "args": ["/Users/abhchoug/work/chim-mcp/dist/server.js"]
+    }
+  }
+}
