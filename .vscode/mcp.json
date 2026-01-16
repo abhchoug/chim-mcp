@@ -1,20 +1,11 @@
 {
+  // For development: uses local build
+  // For users: copy examples/vscode-mcp.json to your .vscode/ folder
   "servers": {
     "chim": {
       "type": "stdio",
-      "command": "npx",
-      "args": ["-y", "@cisco-sbg/chim-mcp"],
-      "env": {
-        "CHIM_API_KEY": "${input:chimApiKey}"
-      }
+      "command": "node",
+      "args": ["${workspaceFolder}/dist/server.js"]
     }
-  },
-  "inputs": [
-    {
-      "id": "chimApiKey",
-      "type": "promptString",
-      "description": "Enter your CHIM API key",
-      "password": true
-    }
-  ]
+  }
 }

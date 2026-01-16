@@ -6,7 +6,20 @@ A [Model Context Protocol](https://modelcontextprotocol.io/) server that exposes
 
 ### VS Code / GitHub Copilot (Recommended)
 
-1. Open VS Code Settings (JSON) or create `.vscode/mcp.json` in your workspace:
+**Option A: One-line install (User Settings)**
+
+Run this command to add CHIM MCP to your VS Code user settings:
+
+```bash
+# macOS/Linux
+curl -fsSL https://raw.githubusercontent.com/abhchoug/chim-mcp/main/scripts/install-vscode.sh | bash
+
+# Or manually: Add to VS Code Settings (JSON) - Cmd+Shift+P → "Preferences: Open User Settings (JSON)"
+```
+
+**Option B: Per-workspace**
+
+Create `.vscode/mcp.json` in your project:
 
 ```json
 {
@@ -20,16 +33,18 @@ A [Model Context Protocol](https://modelcontextprotocol.io/) server that exposes
 }
 ```
 
-2. Set your API key using one of these methods:
-   - Run the `chim_save_api_key` tool from Copilot Chat
-   - Set `CHIM_API_KEY` environment variable
-   - Create `~/.config/chim-mcp/config.json` with `{"apiKey": "your-key"}`
+**Set your API key** (choose one method):
+- Ask Copilot: *"Save my CHIM API key: YOUR_KEY"* (uses `chim_save_api_key` tool)
+- Environment: `export CHIM_API_KEY=your-key`
+- Config file: `~/.config/chim-mcp/config.json` → `{"apiKey": "your-key"}`
 
-3. Restart VS Code and start using CHIM tools in Copilot Chat!
+Then restart VS Code and you're ready! Try: *"List my CHIM changes"*
 
 ### Claude Desktop
 
-Add to `~/Library/Application Support/Claude/claude_desktop_config.json` (macOS) or `%APPDATA%\Claude\claude_desktop_config.json` (Windows):
+Add to your Claude config file:
+- **macOS**: `~/Library/Application Support/Claude/claude_desktop_config.json`
+- **Windows**: `%APPDATA%\Claude\claude_desktop_config.json`
 
 ```json
 {

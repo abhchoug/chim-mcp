@@ -1,0 +1,9 @@
+{
+  "servers": {
+    "chim": {
+      "type": "stdio",
+      "command": "npx",
+      "args": ["-y", "@cisco-sbg/chim-mcp"]
+    }
+  }
+}

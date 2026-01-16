@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "chim": {
+      "command": "npx",
+      "args": ["-y", "@cisco-sbg/chim-mcp"]
+    }
+  }
+}
