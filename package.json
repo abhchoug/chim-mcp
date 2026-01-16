@@ -1,5 +1,5 @@
 {
-  "name": "@cisco-sbg/chim-mcp",
+  "name": "chim-mcp",
   "version": "0.1.0",
   "description": "Model Context Protocol server exposing CHIM change-management workflows as tools.",
   "type": "module",
