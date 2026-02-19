@@ -2,80 +2,34 @@
 
 A [Model Context Protocol](https://modelcontextprotocol.io/) server that exposes CHIM change-management workflows (changes, outages, retros, and change freeze status) as MCP tools. Register this server with VS Code Copilot, Claude Desktop, or any MCP-compatible agent to query or update CHIM directly from your AI assistant.
 
-## 🚀 Quick Install
+## 🚀 Quick Start
 
-### VS Code / GitHub Copilot (Recommended)
+**See [INSTALL.md](INSTALL.md) for complete installation instructions covering:**
+- ✅ VS Code + GitHub Copilot
+- ✅ Claude Desktop  
+- ✅ Standalone command line
+- ✅ Configuration options
 
-**[![Install in VS Code](https://img.shields.io/badge/VS_Code-Install_CHIM_MCP-007ACC?style=for-the-badge&logo=visualstudiocode)](https://insiders.vscode.dev/redirect/mcp/install?name=chim&config=%7B%22type%22%3A%22stdio%22%2C%22command%22%3A%22npx%22%2C%22args%22%3A%5B%22-y%22%2C%22github%3Aabhchoug%2Fchim-mcp%22%5D%7D)**
-
-Or use one of these one-click install links:
-- [Install in VS Code Stable](vscode://ms-vscode.vscode-mcp/install?name=chim&config=%7B%22type%22%3A%22stdio%22%2C%22command%22%3A%22npx%22%2C%22args%22%3A%5B%22-y%22%2C%22github%3Aabhchoug%2Fchim-mcp%22%5D%7D)
-- [Install in VS Code Insiders](https://insiders.vscode.dev/redirect/mcp/install?name=chim&config=%7B%22type%22%3A%22stdio%22%2C%22command%22%3A%22npx%22%2C%22args%22%3A%5B%22-y%22%2C%22github%3Aabhchoug%2Fchim-mcp%22%5D%7D)
-
-**Alternative: Manual Installation**
-
-<details>
-<summary>Click to expand manual options</summary>
-
-**Option A: Shell script**
+**Quick setup (30 seconds):**
 
 ```bash
-# macOS/Linux
-curl -fsSL https://raw.githubusercontent.com/abhchoug/chim-mcp/main/scripts/install-vscode.sh | bash
-```
-
-**Option B: Per-workspace**
-
-Create `.vscode/mcp.json` in your project:
-
-```json
-{
-  "servers": {
-    "chim": {
-      "type": "stdio",
-      "command": "npx",
-      "args": ["-y", "github:abhchoug/chim-mcp"]
-    }
-  }
-}
-```
-
-</details>
-
-**Set your API key** (choose one method):
-- Ask Copilot: *"Save my CHIM API key: YOUR_KEY"* (uses `chim_save_api_key` tool)
-- Environment: `export CHIM_API_KEY=your-key`
-- Config file: `~/.config/chim-mcp/config.json` → `{"apiKey": "your-key"}`
-
-Then restart VS Code and you're ready! Try: *"List my CHIM changes"*
-
-### Claude Desktop
-
-Add to your Claude config file:
-- **macOS**: `~/Library/Application Support/Claude/claude_desktop_config.json`
-- **Windows**: `%APPDATA%\Claude\claude_desktop_config.json`
-
-```json
-{
-  "mcpServers": {
-    "chim": {
-      "command": "npx",
-      "args": ["-y", "github:abhchoug/chim-mcp"]
-    }
-  }
-}
-```
-
-### Global CLI Install
-
-```bash
-# Install directly from GitHub
-npx github:abhchoug/chim-mcp
-
-# Or clone and run locally
+# 1. Clone and build
 git clone https://github.com/abhchoug/chim-mcp.git
-cd chim-mcp && npm install && npm run build
-node dist/server.js
+cd chim-mcp
+npm install && npm run build
+
+# 2. Add full path to your MCP config
+# VS Code: ~/Library/Application Support/Code/User/mcp.json
+# Claude: ~/Library/Application Support/Claude/claude_desktop_config.json
+# (see INSTALL.md for exact configuration)
+
+# 3. Set API key
+export CHIM_API_KEY=your-key
+# OR create ~/.config/chim-mcp/config.json with {"apiKey": "your-key"}
+
+# 4. Reload VS Code or restart Claude Desktop
+
+# 5. Try: "List my CHIM changes" ✨
 ```
 
 ## Prerequisites
